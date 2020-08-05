@@ -1,0 +1,104 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  
+  font-family: Nunito, sans-serif;
+}
+
+#header {
+  display: block;
+  position: relative;
+  padding: 1rem 0px 5rem 0px;
+
+  border-radius: 0px;
+  background: url(https://storage.builderall.com//franquias/2/6122081/editor-html/4827041.png) center center / cover no-repeat scroll border-box rgba(255, 255, 255, 0.996);
+  min-height: 545px;
+  border: 0px none rgb(0, 0, 0);
+}
+
+.main-text {
+  font-size: 1.8rem;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.main-subtext {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+.section {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.section .title {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #d1aa14;
+}
+
+.section .subtitle {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.benefits img {
+  max-width: 70px;
+  margin-bottom: 1rem;
+}
+
+.btn-custom {
+  color: #fff;
+  background-color: #d1aa14;
+  border-color: #d1aa14;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding: 1.1rem 1.3rem;
+}
+
+.btn-disclaimer {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.disclaimer {
+  display: block;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.simulations img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.testemuals img {
+  max-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.testemuals h4 {
+  color: #d1aa14;
+}
+
+.testemuals p {
+  font-style: italic !important;
+  font-size: 1.1rem;
+}
+
+.contact img {
+  max-width: 180px;
+  margin: 0px auto 1rem auto;  
+}
+
+#footer {
+  padding: 2rem 0;
+}
