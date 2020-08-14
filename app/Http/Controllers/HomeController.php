@@ -28,13 +28,15 @@ class HomeController extends Controller
      */
     public function createContact(Request $request)
     {
+        $admin = \App\Admin::first();
+
         $this->validator($request->all())->validate();
-        $user = Contact::create([
+        $contact = Contact::create([
             'admin_id' => Auth::user()->id, 
             'display_name' => $request['display_name'],
             'whatsapp' => $request['whatsapp'],
         ]);
-        return redirect()->intended('/');
+        return redirect()->away('https://wa.me/' . $admin->whatsapp . '?text=Heelo');
     }
 
     /**

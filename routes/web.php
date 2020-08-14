@@ -33,5 +33,6 @@ Route::get('/admin/contacts', 'AdminContactsController@index')->name('admin_cont
 Route::get('/admin/users/new', 'AdminCreateUserController@new')->name('admin_new_user');
 Route::post('/admin/users', 'AdminCreateUserController@create')->name('admin_create_user');
 Route::get('/admin/settings', 'AdminSettingsController@index')->name('admin_settings');
+Route::post('/admin/settings/update_whatsapp', 'AdminSettingsController@updateWhatsapp')->name('admin_update_whatsapp');
 Route::post('/contacts', 'HomeController@createContact')->name('home_create_contact');
 Route::get('/users', 'UserController@index')->name('users_home');

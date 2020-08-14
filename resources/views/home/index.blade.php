@@ -19,8 +19,8 @@
                 </a>    
             </div>
             <div class="col-lg-7">
-                <h3 class="main-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h3>
-                <p class="main-subtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <h3 class="main-text">QUER INICIAR SEU NEGÓCIO PRÓPRIO COM UM PRODUTO QUE TEM ALTO POTENCIAL DE LUCRO E QUE É DESEJADO POR MUITOS?</h3>
+                <p class="main-subtext">Te ensinaremos a construir uma nova fonte de renda com resultados baseados com seu próprio mérito.</p>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
             </div>
             <div class="col-lg-4">
                 <h2 class="text-center font-weight-bold">Insira seus dados</h2>
-                <p>Nossa equipe de analistas entrará em contato com você, agora por E-MAIL</p>
+                <p>Um de nossos Líderes entrará em contato com você, pelo WHATSAPP</p>
                 <form role="form" class="form" method="post" action="{{ route('home_create_contact') }}">
                     @csrf
                     <div class="form-group">
@@ -69,41 +69,41 @@
 <div class="section benefits" style="background-color: #5d5d5d;color: white;">
     <div class="container">
         <div class=" text-center">
-            <h2 class="title">Lorem Ipsum is simply dummy text of the printing</h2>
-            <p class="subtitle mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h2 class="title">BENEFÍCIOS DE INICIAR SEU NEGÓCIO</h2>
+            <p class="subtitle mb-5">Além da possibilidade de ganhar mais, existem outros benefícios:</p>
         </div>
         <div class="row">
             <div class="col-lg-4 text-center mb-5">
                 <img src="/img/b1.png" alt="B1" class="img-fluid" />
-                <h4 class="mb-3">Lorem Ipsum</h4>
-                <p>Poder começar com pouco dinheiro e reinvestir conforme o resultado.</p>
+                <h4 class="mb-3">Liberdade de Horário</h4>
+                <p>Trabalhar quanto quiser e nos horários que forem ideais pra você.</p>
             </div>
             <div class="col-lg-4 text-center mb-5">
                 <img src="/img/b2.png" alt="B2" class="img-fluid" />
-                <h4 class="mb-3">Lorem Ipsum</h4>
+                <h4 class="mb-3">Flexibilidade de Investimento</h4>
                 <p>Poder começar com pouco dinheiro e reinvestir conforme o resultado.</p>
             </div>
             <div class="col-lg-4 text-center mb-5">
                 <img src="/img/b3.png" alt="B3" class="img-fluid" />
-                <h4 class="mb-3">Lorem Ipsum</h4>
-                <p>Poder começar com pouco dinheiro e reinvestir conforme o resultado.</p>
+                <h4 class="mb-3">Sem cobrança</h4>
+                <p>Trabalhar de acordo com suas ambições, podendo atingir SEUS objetivos e metas.</p>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4 text-center mb-5">
                 <img src="/img/b4.png" alt="B4" class="img-fluid" />
-                <h4 class="mb-3">Lorem Ipsum</h4>
-                <p>Poder começar com pouco dinheiro e reinvestir conforme o resultado.</p>
+                <h4 class="mb-3">Treinamento e suporte</h4>
+                <p>Ter um ambiente virtual com treinamentos em vídeo e suporte por Whatsapp.</p>
             </div>
             <div class="col-lg-4 text-center mb-5">
                 <img src="/img/b5.png" alt="B5" class="img-fluid" />
-                <h4 class="mb-3">Lorem Ipsum</h4>
-                <p>Poder começar com pouco dinheiro e reinvestir conforme o resultado.</p>
+                <h4 class="mb-3">Desenvolvimento Profissional</h4>
+                <p>Aprender e desenvolver habilidades super valorizadas no mercado de trabalho.</p>
             </div>
             <div class="col-lg-4 text-center mb-5">
                 <img src="/img/b6.png" alt="B6" class="img-fluid" />
-                <h4 class="mb-3">Lorem Ipsum</h4>
-                <p>Poder começar com pouco dinheiro e reinvestir conforme o resultado.</p>
+                <h4 class="mb-3">Sistema meritocrático</h4>
+                <p>Poder aumentar seus ganhos, aumentando sua dedicação.</p>
             </div>
         </div>
     </div>
@@ -113,13 +113,13 @@
 <div class="section simulations" style="background-color: #e0e0e0;color: #333;">
     <div class="container">
         <div class=" text-center">
-            <h2 class="title">Lorem Ipsum is simply dummy text of the printing</h2>
-            <p class="subtitle mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h2 class="title">SIMULAÇÃO DE LUCRO EM 30 DIAS</h2>
+            <p class="subtitle mb-5">Se você vender algumas unidades por dia no preço sugerido, você poderá incrementar sua renda mensal com valores muito atrativos.</p>
         </div>
         <div class="row">
             <div class="col-lg-4 text-center">
                 <img src="/img/sim2.png" alt="Simulacao 1" class="img-fluid" />
-                <p>LUCRO POR CHÁ VENDIDO = R$ 20 2 CHÁS X R$ 20 X 30 DIAS R$ 1200 LUCRO NO MÊS</p>
+                <p>LUCRO POR CHÁ VENDIDO = R$ 20 1 CHÁ X R$ 20 X 30 DIAS R$ 600 LUCRO NO MÊS</p>
             </div>
             <div class="col-lg-4 text-center">
                 <img src="/img/sim2.png" alt="Simulacao 2" class="img-fluid" />
@@ -127,7 +127,7 @@
             </div>
             <div class="col-lg-4 text-center">
                 <img src="/img/sim2.png" alt="Simulacao 3" class="img-fluid" />
-                <p>LUCRO POR CHÁ VENDIDO = R$ 20 2 CHÁS X R$ 20 X 30 DIAS R$ 1200 LUCRO NO MÊS</p>
+                <p>LUCRO POR CHÁ VENDIDO = R$ 20 3 CHÁ X R$ 20 X 30 DIAS R$ 1800 LUCRO NO MÊS</p>
             </div>
         </div>
     </div>
@@ -137,24 +137,24 @@
 <div class="section testemuals">
     <div class="container">
         <div class=" text-center">
-            <h2 class="title">Lorem Ipsum is simply dummy text of the printing</h2>
-            <p class="subtitle mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h2 class="title">DEPOIMENTOS</h2>
+            <p class="subtitle mb-5">Conheça um pouco a história de pessoas que estão tendo sucesso na comercialização do Superchá</p>
         </div>
         <div class="row">
             <div class="col-lg-4 text-center">
                 <img src="/img/dep1.png" alt="Depoimento 1" class="img-fluid" />
-                <h4>Lorem Ipsum</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h4>Celma Martins</h4>
+                <p>Meu nome é Celma Martins, sou representante da Maravilhas da Terra a 3 meses. Somente com a venda do produto tenho uma renda mensal média mensal de R$ 2.500,00. No mês de fevereiro cheguei a lucrar R$ 3.400,00 somente com vendas dos Chás, estou extremamente feliz com os resultados financeiros e de bem-estar que venho obtendo com o produto.</p>
             </div>
             <div class="col-lg-4 text-center">
                 <img src="/img/dep2.png" alt="Depoimento 2" class="img-fluid" />
-                <h4>Lorem Ipsum</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h4>Camila Costa</h4>
+                <p>Eu sou Camilla Costa, campeã de três tambores, comecei a usar os produtos da Maravilhas da Terra por indicação do meu personal e do nutricionista e tive um resultado incrível.  Várias pessoas começaram a me pergutar de que forma tinha emagreci em tão pouco tempo, com isso já me interessei em vender o Superchá SB. O mais fantástico foi descobrir que existia outros produtos maravilhosos, além de um grande negócio, que está me permitindo ganhar uma boa  grana.</p>
             </div>
             <div class="col-lg-4 text-center">
                 <img src="/img/dep3.png" alt="Depoimento 3" class="img-fluid" />
-                <h4>Lorem Ipsum</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h4>Jaqueline Queiros</h4>
+                <p>Olá meu nome é Jaqueline Queiros e posiciono os produtos da Maravilhas da Terra no mercado a 3 meses. Sou funcionária pública, mas como precisamos ter mais de uma fonte de renda, a Maravilhas da Terra veio me proporcionar essa segunda renda em minha vida.  Estou muito satisfeita com meus resultados. O Superchá SB é um produto que se vende sozinho e esse mês já estou com novas estratégias para aumentar minhas vendas!</p>
             </div>
         </div>
     </div>
