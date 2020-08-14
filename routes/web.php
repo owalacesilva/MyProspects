@@ -28,4 +28,6 @@ Route::post('/users/register', 'Auth\RegisterController@createUser');
 
 // Route::view('/home', 'home')->middleware('auth');
 Route::get('/admin', 'AdminController@index');
+Route::get('/admin/users', 'AdminUsersController@index');
+Route::get('/admin/contacts', 'AdminContactsController@index');
 Route::get('/users', 'UserController@index');
