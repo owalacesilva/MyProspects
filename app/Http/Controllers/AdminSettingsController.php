@@ -5,20 +5,33 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
-use App\Contact;
+use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class HomeController extends Controller
+class AdminSettingsController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+
+    use AuthenticatesUsers;
+
     /**
-     * Show the application dashboard.
+     * Create a new controller instance.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return void
      */
-    public function index()
+    public function __construct()
     {
-        return view('home.index');
+        $this->middleware('auth');
     }
 
     /**
@@ -26,15 +39,23 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function createContact(Request $request)
+    public function index()
+    {
+        return view('admin.settings');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function updateWhatsapp(Request $request)
     {
         $this->validator($request->all())->validate();
-        $user = Contact::create([
-            'admin_id' => Auth::user()->id, 
-            'display_name' => $request['display_name'],
+        $user = Auth::user()->update([
             'whatsapp' => $request['whatsapp'],
         ]);
-        return redirect()->intended('/');
+        return redirect()->intended('admin/settings');
     }
 
     /**
@@ -46,7 +67,6 @@ class HomeController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'display_name' => ['required', 'string', 'max:255'],
             'whatsapp' => ['required', 'string', 'max:255'],
         ]);
     }

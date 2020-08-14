@@ -8,7 +8,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="{{ route('admin_home') }}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -17,11 +17,22 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin_contacts') }}">Contatos</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="{{ route('admin_settings') }}">Configuracao</a>
           </li>
         </ul>
       </div>
     </nav>
+
+    <form role="form" class="form" method="post" action="{{ route('admin_update_whatsapp') }}">
+      @csrf
+      <div class="form-group">
+        <label for="whatsapp" class="control-label">WhatsApp {{ auth()->user()->whatsapp }}</label>
+        <input type="text" id="whatsapp" name="whatsapp" class="form-control" />
+      </div>
+      <div class="text-right">
+        <button type="submit" class="btn btn-success">Salvar WhatsApp</button>
+      </div>
+    </form>
   </div>
 @endsection

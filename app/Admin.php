@@ -12,6 +12,15 @@ class Admin extends Authenticatable
     protected $guard = 'admin';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'whatsapp',
+    ];
+
+    /**
      * The attributes that should be hidden for arrays.
      *
      * @var array

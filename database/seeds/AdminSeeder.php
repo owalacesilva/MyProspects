@@ -16,7 +16,7 @@ class AdminSeeder extends Seeder
             'email' => 'douglas@gmail.com',
             'username' => "admindouglas",
             'password' => Hash::make('douglas123'),
-            'whastapp' => "11988887777",
+            'whatsapp' => "11988887777",
         ]);
     }
 }

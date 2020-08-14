@@ -20,8 +20,9 @@ class CreateContactsTable extends Migration
                   ->constrained('admins')
                   ->onDelete('cascade');
             $table->string('display_name');
-            $table->string('email');
-            $table->string('whastapp');
+            $table->string('email')->nullable();
+            $table->string('whatsapp');
+            $table->string('role');
         });
     }
 

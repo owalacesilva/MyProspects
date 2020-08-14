@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'index');
+Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/admin/login', 'Auth\LoginController@showAdminLoginForm');
@@ -27,5 +27,11 @@ Route::post('/admin/register', 'Auth\RegisterController@createAdmin');
 Route::post('/users/register', 'Auth\RegisterController@createUser');
 
 // Route::view('/home', 'home')->middleware('auth');
-Route::get('/admin', 'AdminController@index');
-Route::get('/users', 'UserController@index');
+Route::get('/admin', 'AdminController@index')->name('admin_home');
+Route::get('/admin/users', 'AdminUsersController@index')->name('admin_users');
+Route::get('/admin/contacts', 'AdminContactsController@index')->name('admin_contacts');
+Route::get('/admin/users/new', 'AdminCreateUserController@new')->name('admin_new_user');
+Route::post('/admin/users', 'AdminCreateUserController@create')->name('admin_create_user');
+Route::get('/admin/settings', 'AdminSettingsController@index')->name('admin_settings');
+Route::post('/contacts', 'HomeController@createContact')->name('home_create_contact');
+Route::get('/users', 'UserController@index')->name('users_home');

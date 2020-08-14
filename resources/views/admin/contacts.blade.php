@@ -8,13 +8,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="{{ route('admin_home') }}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin_users') }}">Usuários</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="{{ route('admin_contacts') }}">Contatos</a>
           </li>
           <li class="nav-item">
@@ -23,5 +23,34 @@
         </ul>
       </div>
     </nav>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">WhatsApp</th>
+          <th scope="col">Registrado em</th>
+        </tr>
+      </thead>
+      <tbody>
+        @if (count($contacts) > 0)
+            @foreach ($contacts as $contact)
+              <tr>
+                <th scope="row">{{ $contact->id }}</th>
+                <td>{{ $contact->display_name }}</td>
+                <td>{{ $contact->email }}</td>
+                <td>{{ $contact->whatsapp }}</td>
+                <td>{{ $contact->created_at }}</td>
+              </tr>
+            @endforeach
+        @else
+          <tr>
+            <th colspan="5" class="text-center">Nenhum contato registrado</th>
+          </tr>
+        @endif
+      </tbody>
+    </table>
   </div>
 @endsection
