@@ -27,11 +27,15 @@
     <form role="form" class="form" method="post" action="{{ route('admin_update_whatsapp') }}">
       @csrf
       <div class="form-group">
-        <label for="whatsapp" class="control-label">WhatsApp {{ auth()->user()->whatsapp }}</label>
-        <input type="text" id="whatsapp" name="whatsapp" class="form-control" />
+        <label for="whatsapp" class="control-label">WhatsApp</label>
+        <input type="text" id="whatsapp" name="whatsapp" class="form-control" value="{{ auth()->user()->whatsapp }}" required />
+      </div>
+      <div class="form-group">
+        <label for="message" class="control-label">Mensagem do WhatsApp</label>
+        <textarea rows="3" id="message" name="message" class="form-control" placeholder="Escreva a mensagem aqui...">{{ auth()->user()->message }}</textarea>
       </div>
       <div class="text-right">
-        <button type="submit" class="btn btn-success">Salvar WhatsApp</button>
+        <button type="submit" class="btn btn-primary">Atualizar</button>
       </div>
     </form>
   </div>

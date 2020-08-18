@@ -14,9 +14,9 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
-            $table->foreignId('admin_id')
+            $table->unsignedInteger('admin_id')
                   ->constrained('admins')
                   ->onDelete('cascade');
             $table->string('display_name');

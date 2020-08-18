@@ -14,12 +14,12 @@ class CreatePurchaseContactsTable extends Migration
     public function up()
     {
         Schema::create('purchase_contacts', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
-            $table->foreignId('purchase_id')
+            $table->unsignedInteger('purchase_id')
                   ->constrained('purchases')
                   ->onDelete('cascade');
-            $table->foreignId('contact_id')
+            $table->unsignedInteger('contact_id')
                   ->constrained('contacts')
                   ->onDelete('cascade');
         });

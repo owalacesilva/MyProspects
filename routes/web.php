@@ -21,7 +21,7 @@ Route::get('/users/login', 'Auth\LoginController@showUserLoginForm');
 Route::get('/admin/register', 'Auth\RegisterController@showAdminRegisterForm');
 Route::get('/users/register', 'Auth\RegisterController@showUserRegisterForm');
 
-Route::post('/admin/login', 'Auth\LoginController@adminLogin');
+Route::post('/admin/login', 'Auth\LoginController@adminLogin')->name('post_admin_login');
 Route::post('/users/login', 'Auth\LoginController@userLogin');
 Route::post('/admin/register', 'Auth\RegisterController@createAdmin');
 Route::post('/users/register', 'Auth\RegisterController@createUser');

@@ -14,7 +14,7 @@ class CreateAdminsTable extends Migration
     public function up()
     {
         Schema::create('admins', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
             $table->string('display_name');
             $table->string('email')->unique();
@@ -22,6 +22,7 @@ class CreateAdminsTable extends Migration
             $table->string('username')->unique();
             $table->string('password');
             $table->string('whatsapp')->unique();
+            $table->text('message')->nullable();
             $table->rememberToken();
         });
     }

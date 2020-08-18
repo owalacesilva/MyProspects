@@ -52,10 +52,12 @@ class AdminSettingsController extends Controller
     public function updateWhatsapp(Request $request)
     {
         $this->validator($request->all())->validate();
-        $user = Auth::user()->update([
+        $admin = Auth::user()->fill([
             'whatsapp' => $request['whatsapp'],
+            'message' => $request['message'],
         ]);
-        return redirect()->intended('admin/settings');
+        $admin->save();
+        return redirect('admin/settings');
     }
 
     /**
@@ -68,6 +70,7 @@ class AdminSettingsController extends Controller
     {
         return Validator::make($data, [
             'whatsapp' => ['required', 'string', 'max:255'],
+            'message' => ['string', 'max:255'],
         ]);
     }
 }

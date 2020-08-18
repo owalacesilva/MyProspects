@@ -19,7 +19,7 @@
                 </a>    
             </div>
             <div class="col-lg-7">
-                <h3 class="main-text">QUER INICIAR SEU NEGÓCIO PRÓPRIO COM UM PRODUTO QUE TEM ALTO POTENCIAL DE LUCRO E QUE É DESEJADO POR MUITOS?</h3>
+                <h3 class="main-text"> QUER INICIAR SEU NEGÓCIO PRÓPRIO COM UM PRODUTO QUE TEM ALTO POTENCIAL DE LUCRO E QUE É DESEJADO POR MUITOS?</h3>
                 <p class="main-subtext">Te ensinaremos a construir uma nova fonte de renda com resultados baseados com seu próprio mérito.</p>
             </div>
         </div>
@@ -40,6 +40,11 @@
                 <p>Um de nossos Líderes entrará em contato com você, pelo WHATSAPP</p>
                 <form role="form" class="form" method="post" action="{{ route('home_create_contact') }}">
                     @csrf
+                    @if (session('danger'))
+                        <div class="alert alert-danger">
+                            {{ session('danger') }}
+                        </div>
+                    @endif
                     <div class="form-group">
                         <label for="display_name" class="control-label">Nome Completo</label>
                         <input type="text" id="display_name" name="display_name" class="form-control" placeholder="Informe seu nome" required />
@@ -50,7 +55,7 @@
                     </div>
                     <div class="form-group">
                         <label for="type" class="control-label">Quero ser</label>
-                        <select id="type" name="type" class="form-control" required>
+                        <select id="role" name="role" class="form-control" required>
                             <option value>Selecione um opcao</option>
                             <option value="consultor">Consultor</option>
                             <option value="consumidor">Consumidor</option>

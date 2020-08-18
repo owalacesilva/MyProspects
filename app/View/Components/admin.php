@@ -5,7 +5,7 @@ namespace App\View\Components;
 use Illuminate\View\Component;
 
 class admin extends Component
-{
+{ 
     /**
      * Create a new component instance.
      *

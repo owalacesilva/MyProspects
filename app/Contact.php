@@ -12,6 +12,9 @@ class Contact extends Model
      * @var array
      */
     protected $fillable = [
-        'admin_id', 'display_name', 'whatsapp',
+        'admin_id', 
+        'display_name', 
+        'whatsapp', 
+        'role',
     ];
 }

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Contact;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
 
 class HomeController extends Controller
 {
@@ -28,15 +29,20 @@ class HomeController extends Controller
      */
     public function createContact(Request $request)
     {
-        $admin = \App\Admin::first();
-
-        $this->validator($request->all())->validate();
-        $contact = Contact::create([
-            'admin_id' => Auth::user()->id, 
-            'display_name' => $request['display_name'],
-            'whatsapp' => $request['whatsapp'],
-        ]);
-        return redirect()->away('https://wa.me/' . $admin->whatsapp . '?text=Heelo');
+        try {
+            $admin = \App\Admin::first();
+    
+            $this->validator($request->all())->validate();
+            $contact = Contact::create([
+                'admin_id' => $admin->id, 
+                'display_name' => $request['display_name'],
+                'whatsapp' => $request['whatsapp'],
+                'role' => $request['role'],
+            ]);
+            return redirect()->away('https://wa.me/' . $admin->whatsapp . '?text=' . $admin->message);
+        } catch(ValidationException $exc) {
+            return redirect()->back()->with('danger', $exc->getMessage());
+        }
     }
 
     /**
@@ -50,6 +56,7 @@ class HomeController extends Controller
         return Validator::make($data, [
             'display_name' => ['required', 'string', 'max:255'],
             'whatsapp' => ['required', 'string', 'max:255'],
+            'role' => ['required', 'string', 'max:255'],
         ]);
     }
 }
