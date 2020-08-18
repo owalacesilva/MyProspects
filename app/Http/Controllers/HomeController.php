@@ -32,7 +32,7 @@ class HomeController extends Controller
 
         $this->validator($request->all())->validate();
         $contact = Contact::create([
-            'admin_id' => Auth::user()->id, 
+            'admin_id' => $admin->id, 
             'display_name' => $request['display_name'],
             'whatsapp' => $request['whatsapp'],
         ]);

@@ -19,7 +19,7 @@
                 </a>    
             </div>
             <div class="col-lg-7">
-                <h3 class="main-text">QUER INICIAR SEU NEGÓCIO PRÓPRIO COM UM PRODUTO QUE TEM ALTO POTENCIAL DE LUCRO E QUE É DESEJADO POR MUITOS?</h3>
+                <h3 class="main-text"> QUER INICIAR SEU NEGÓCIO PRÓPRIO COM UM PRODUTO QUE TEM ALTO POTENCIAL DE LUCRO E QUE É DESEJADO POR MUITOS?</h3>
                 <p class="main-subtext">Te ensinaremos a construir uma nova fonte de renda com resultados baseados com seu próprio mérito.</p>
             </div>
         </div>
