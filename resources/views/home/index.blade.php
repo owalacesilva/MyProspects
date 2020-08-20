@@ -5,26 +5,44 @@
 <header id="header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 text-center mb-5">
+            <div class="col-lg-5 text-center mb-3">
                 <a class="d-block">
-                    <img alt="Header Logo" src="/img/logo.png" class="img-fluid" />
+                    <img alt="Header Logo" src="/img/logo.png" class="img-fluid" style="max-width: 180px;" />
                 </a>
             </div>
             <div class="col-lg-7"></div>
         </div>
         <div class="row">
             <div class="col-lg-5">
-                <a class="d-block mb-4">
+                <a class="d-block mb-2">
                     <img alt="Image 1" src="/img/image2.png" class="img-fluid" />
                 </a>    
             </div>
-            <div class="col-lg-7">
-                <h3 class="main-text"> QUER INICIAR SEU NEGÓCIO PRÓPRIO COM UM PRODUTO QUE TEM ALTO POTENCIAL DE LUCRO E QUE É DESEJADO POR MUITOS?</h3>
+            <div class="col-lg-6">
+                <h3 class="main-text"> QUER INICIAR SEU <span class="text-color">NEGÓCIO PRÓPRIO</span> COM UM PRODUTO QUE TEM <span class="text-color">ALTO POTENCIAL DE LUCRO</span> E QUE É <span class="text-color">DESEJADO POR MUITOS?</span></h3>
                 <p class="main-subtext">Te ensinaremos a construir uma nova fonte de renda com resultados baseados com seu próprio mérito.</p>
             </div>
         </div>
     </div>
 </header>
+
+<!-- Conheca -->
+<div class="section" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6"> 
+                <h2>CONHEÇA A MARAVILHAS DA TERRA</h2>
+                <h4 class="text-color font-weight-bold">Fundada em 2017</h4>
+                <p>Somos grupo em todos os sentidos da palavra. Pensamos juntos para pensar muito maior. Reunimos ideias, sonhos e pessoas em um único lugar. Lutamos para fazer a diferença: na vida de cada um de nós e no mundo todo. Por que cada dia é uma nova oportunidade de vencer. E, para nós, vitória só vale se for no plural.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="mb-5">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D-VURvUjx4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Video -->
 <div class="section" style="background-color: #efefef;">
@@ -35,7 +53,7 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/_VceQT4Y2Hk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div id="div-form" class="col-lg-4">
                 <h2 class="text-center font-weight-bold">Insira seus dados</h2>
                 <p>Um de nossos Líderes entrará em contato com você, pelo WHATSAPP</p>
                 <form role="form" class="form" method="post" action="{{ route('home_create_contact') }}">
@@ -47,22 +65,22 @@
                     @endif
                     <div class="form-group">
                         <label for="display_name" class="control-label">Nome Completo</label>
-                        <input type="text" id="display_name" name="display_name" class="form-control" placeholder="Informe seu nome" required />
+                        <input type="text" id="display_name" name="display_name" class="form-control form-control-lg" placeholder="Informe seu nome" required />
                     </div>
                     <div class="form-group">
-                        <label for="whatsapp" class="control-label">WhatsApp</label>
-                        <input type="text" id="whatsapp" name="whatsapp" class="form-control" placeholder="Informe seu whatsapp" required />
+                        <label for="whatsapp" class="control-label">Seu WhatsApp</label>
+                        <input type="text" id="whatsapp" name="whatsapp" class="form-control form-control-lg" placeholder="Informe seu whatsapp" required />
                     </div>
                     <div class="form-group">
-                        <label for="type" class="control-label">Quero ser</label>
-                        <select id="role" name="role" class="form-control" required>
+                        <label for="type" class="control-label">Quero ser um</label>
+                        <select id="role" name="role" class="form-control form-control-lg" required>
                             <option value>Selecione um opcao</option>
                             <option value="consultor">Consultor</option>
                             <option value="consumidor">Consumidor</option>
                         </select>
                     </div>
                     <div class="text-right">
-                        <button type="submit" class="btn btn-custom btn-lg btn-block mb-5">saber mais</button>
+                        <button type="submit" class="btn btn-custom btn-lg btn-block mb-5"> <i class="fa fa-whatsapp fa-fw"></i>chamar no whats</button>
                     </div>
                 </form>
             </div>
@@ -114,25 +132,51 @@
     </div>
 </div>
 
-<!-- Simulacao de Lucros -->
+<!-- Linha de chás -->
 <div class="section simulations" style="background-color: #e0e0e0;color: #333;">
     <div class="container">
-        <div class=" text-center">
-            <h2 class="title">SIMULAÇÃO DE LUCRO EM 30 DIAS</h2>
-            <p class="subtitle mb-5">Se você vender algumas unidades por dia no preço sugerido, você poderá incrementar sua renda mensal com valores muito atrativos.</p>
+        <div class="text-center">
+            <h2 class="title">CONHEÇA NOSSA LINHA DE CHÁS</h2>
+            <p class="subtitle mb-5">Os chás funcionais com tecnologia exclusiva MDTea e mais vendidos do Brasil!</p>
         </div>
         <div class="row">
-            <div class="col-lg-4 text-center">
-                <img src="/img/sim2.png" alt="Simulacao 1" class="img-fluid" />
-                <p>LUCRO POR CHÁ VENDIDO = R$ 20 1 CHÁ X R$ 20 X 30 DIAS R$ 600 LUCRO NO MÊS</p>
+            <div class="col-lg-4 text-center mb-5">
+                <h5 class="name">Superchá SB</h5>
+                <img src="/img/prod1.png" alt="Simulacao 1" class="img-fluid" />
+                <span class="head">Principais Benefícios:</span>
+                <p class="desc">Ajuda a eliminar as toxinas do corpo; Desintoxica e promove a limpeza do organismo; Melhora a digestão e funcionamento intestinal.</p>
             </div>
-            <div class="col-lg-4 text-center">
-                <img src="/img/sim2.png" alt="Simulacao 2" class="img-fluid" />
-                <p>LUCRO POR CHÁ VENDIDO = R$ 20 2 CHÁS X R$ 20 X 30 DIAS R$ 1200 LUCRO NO MÊS</p>
+            <div class="col-lg-4 text-center mb-5">
+                <h5 class="name">Linfachá</h5>
+                <img src="/img/prod2.png" alt="Simulacao 1" class="img-fluid" />
+                <span class="head">Principais Benefícios:</span>
+                <p class="desc">Ajuda na queima da gordura corporal; Elimina toxinas e líquidos; Diminui o inchaço; Termogênico, Desintoxicante e Diurético.</p>
             </div>
-            <div class="col-lg-4 text-center">
-                <img src="/img/sim2.png" alt="Simulacao 3" class="img-fluid" />
-                <p>LUCRO POR CHÁ VENDIDO = R$ 20 3 CHÁ X R$ 20 X 30 DIAS R$ 1800 LUCRO NO MÊS</p>
+            <div class="col-lg-4 text-center mb-5">
+                <h5 class="name">Sbeltchá</h5>
+                <img src="/img/prod3.png" alt="Simulacao 1" class="img-fluid" />
+                <span class="head">Principais Benefícios:</span>
+                <p class="desc">Promove a saciedade; Queima gordura corporal; Acelera o metabolismo; Melhora a digestão; Termogênico.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 text-center mb-5">
+                <h5 class="name">Glycontrol</h5>
+                <img src="/img/prod4.png" alt="Simulacao 1" class="img-fluid" />
+                <span class="head">Principais Benefícios:</span>
+                <p class="desc">Auxilia no controle da glicemia; Normaliza os níveis de açúcar no sangue.</p>
+            </div>
+            <div class="col-lg-4 text-center mb-5">
+                <h5 class="name">Sonobom</h5>
+                <img src="/img/prod5.png" alt="Simulacao 1" class="img-fluid" />
+                <span class="head">Principais Benefícios:</span>
+                <p class="desc">Reduz os efeitos da insônia; Ajuda a reduzir dores de cabeça; Promove um sono de qualidade; Ajuda a relaxar; Alivia o stress; Reduz a ansiedade.</p>
+            </div>
+            <div class="col-lg-4 text-center mb-5">
+                <h5 class="name">Santé</h5>
+                <img src="/img/prod6.png" alt="Simulacao 1" class="img-fluid" />
+                <span class="head">Principais Benefícios:</span>
+                <p class="desc">Elimina toxinas; Promove o rejuvenescimento; Desintoxica o organismo; Melhora a digestão e o funcionamento intestinal; Antioxidante.</p>
             </div>
         </div>
     </div>
@@ -148,46 +192,54 @@
         <div class="row">
             <div class="col-lg-4 text-center">
                 <img src="/img/dep1.png" alt="Depoimento 1" class="img-fluid" />
-                <h4>Celma Martins</h4>
-                <p>Meu nome é Celma Martins, sou representante da Maravilhas da Terra a 3 meses. Somente com a venda do produto tenho uma renda mensal média mensal de R$ 2.500,00. No mês de fevereiro cheguei a lucrar R$ 3.400,00 somente com vendas dos Chás, estou extremamente feliz com os resultados financeiros e de bem-estar que venho obtendo com o produto.</p>
+                <h4 class="font-weight-bold">Celma Martins</h4>
+                <p>Meu nome é Celma Martins, sou representante da Maravilhas da Terra a 3 meses. Somente com a venda do produto tenho uma renda mensal média de R$ 2.500,00.</br></br>No mês de fevereiro cheguei a lucrar R$ 3.400,00 somente com vendas dos Chás, estou extremamente feliz com os resultados financeiros e de bem-estar que venho obtendo com o produto.</p>
             </div>
             <div class="col-lg-4 text-center">
                 <img src="/img/dep2.png" alt="Depoimento 2" class="img-fluid" />
-                <h4>Camila Costa</h4>
-                <p>Eu sou Camilla Costa, campeã de três tambores, comecei a usar os produtos da Maravilhas da Terra por indicação do meu personal e do nutricionista e tive um resultado incrível.  Várias pessoas começaram a me pergutar de que forma tinha emagreci em tão pouco tempo, com isso já me interessei em vender o Superchá SB. O mais fantástico foi descobrir que existia outros produtos maravilhosos, além de um grande negócio, que está me permitindo ganhar uma boa  grana.</p>
+                <h4 class="font-weight-bold">Camila Costa</h4>
+                <p>Eu sou Camilla Costa, campeã de três tambores, comecei a usar os produtos da Maravilhas da Terra por indicação do meu personal e do nutricionista e tive um resultado incrível.</br></br>Várias pessoas começaram a me pergutar de que forma tinha emagreci em tão pouco tempo, com isso já me interessei em vender o Superchá SB.</br></br>O mais fantástico foi descobrir que existia outros produtos maravilhosos, além de um grande negócio, que está me permitindo ganhar uma boa  grana.</p>
             </div>
             <div class="col-lg-4 text-center">
                 <img src="/img/dep3.png" alt="Depoimento 3" class="img-fluid" />
-                <h4>Jaqueline Queiros</h4>
-                <p>Olá meu nome é Jaqueline Queiros e posiciono os produtos da Maravilhas da Terra no mercado a 3 meses. Sou funcionária pública, mas como precisamos ter mais de uma fonte de renda, a Maravilhas da Terra veio me proporcionar essa segunda renda em minha vida.  Estou muito satisfeita com meus resultados. O Superchá SB é um produto que se vende sozinho e esse mês já estou com novas estratégias para aumentar minhas vendas!</p>
+                <h4 class="font-weight-bold">Jaqueline Queiros</h4>
+                <p>Olá meu nome é Jaqueline Queiros e posiciono os produtos da Maravilhas da Terra no mercado a 3 meses.</br></br>Sou funcionária pública, mas como precisamos ter mais de uma fonte de renda, a Maravilhas da Terra veio me proporcionar essa segunda renda em minha vida.  Estou muito satisfeita com meus resultados.</br></br>O Superchá SB é um produto que se vende sozinho e esse mês já estou com novas estratégias para aumentar minhas vendas!</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Contato -->
-<div class="section contact" style="background-color: #5d5d5d;color: white;">
+<!-- Simulacao de Lucros -->
+<div class="section simulations" style="background-color: #e0e0e0;color: #333;">
     <div class="container">
-        <h5 class="text-center mb-3">Estou à disposição caso queira entrar em contato direto comigo, seguem os dados abaixo:</h5>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-3 text-center">
-                <img src="/img/profile.png" alt="Profile" class="img-fluid" />
+        <div class=" text-center">
+            <h2 class="title">SIMULAÇÃO DE LUCRO EM 30 DIAS</h2>
+            <p class="subtitle mb-5">Se você vender algumas unidades por dia no preço sugerido, você poderá incrementar sua renda mensal com valores muito atrativos.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <img src="/img/sim1.png" alt="Simulacao 1" class="img-fluid" />
+                <p>LUCRO POR CHÁ VENDIDO = <strong>R$ 20 1 CHÁ</strong> X R$ 20 X 30 DIAS <span class="text-color">R$ 600</span> LUCRO NO MÊS</p>
             </div>
-            <div class="col-lg-3 text-center">
-                <p class="mb-1">Aurélio Azevedo</p>
-                <p class="mb-1">+55 (62) 98235-8500</p>
-                <p class="mb-3">contato@aurelioazevedo.com</p>
-                <button type="button" class="btn btn-custom btn-lg">chamar no whats</button>
+            <div class="col-lg-4 text-center">
+                <img src="/img/sim2.png" alt="Simulacao 2" class="img-fluid" />
+                <p>LUCRO POR CHÁ VENDIDO = <strong>R$ 20 2 CHÁS</strong> X R$ 20 X 30 DIAS <span class="text-color">R$ 1200</span> LUCRO NO MÊS</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img src="/img/sim3.png" alt="Simulacao 3" class="img-fluid" />
+                <p>LUCRO POR CHÁ VENDIDO = <strong>R$ 20 3 CHÁS</strong> X R$ 20 X 30 DIAS <span class="text-color">R$ 1800</span> LUCRO NO MÊS</p>
             </div>
         </div>
     </div>
-</div> 
+</div>
 
 <!-- Footer -->
 <footer id="footer">
     <div class="container text-center">
-        <img src="/img/footer.png" alt="Footer" class="img-fluid" />
-        <p>©2020 Revenda Superchá - Página desenvolvida por distribuidor independente Maravilhas da Terra.</p>
+        <div class="mb-3">
+            <img src="/img/footer.png" alt="Footer" class="img-fluid" />
+        </div>
+        <p>©2020 Revenda Superchá - Página desenvolvida por <strong>Líder em Expansão</strong> Fique Rico com Saúde.</p>
     </div>
 </footer>
 @endsection

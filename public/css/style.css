@@ -6,6 +6,7 @@ body {
   background-color: white;
   
   font-family: Nunito, sans-serif;
+  font-size: 1rem;
 }
 
 #header {
@@ -15,20 +16,26 @@ body {
 
   border-radius: 0px;
   background: url(https://storage.builderall.com//franquias/2/6122081/editor-html/4827041.png) center center / cover no-repeat scroll border-box rgba(255, 255, 255, 0.996);
-  min-height: 545px;
+  min-height: 445px;
   border: 0px none rgb(0, 0, 0);
 }
 
 .main-text {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-style: normal;
+  font-weight: 200;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 .main-subtext {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.control-label {
   font-size: 1.3rem;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .section {
@@ -76,8 +83,24 @@ body {
 }
 
 .simulations img {
-  max-width: 150px;
+  max-height: 150px;
   margin-bottom: 1rem;
+}
+
+.simulations .name {
+  color: #d1aa14;
+  font-weight: bolder;
+  font-size: 1.6rem;
+}
+
+.simulations .head {
+  display: block;
+  color: #d1aa14;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.simulations .desc {
 }
 
 .testemuals img {
@@ -92,11 +115,17 @@ body {
 .testemuals p {
   font-style: italic !important;
   font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .contact img {
   max-width: 180px;
   margin: 0px auto 1rem auto;  
+}
+
+.text-color {
+  color: #d1aa14;
+  font-weight: 600;
 }
 
 #footer {
