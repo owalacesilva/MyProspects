@@ -14,9 +14,10 @@
       <title>{{ config('app.name', 'Laravel') }}</title>
 
       <!-- Scripts -->
-      <script src="{{ asset('js/jquery-3.5.1.min.js') }}" defer></script>
-      <script src="{{ asset('js/bootstrap.min.js') }}" defer></script>
-      <script src="{{ asset('js/scripts.js') }}" defer></script>
+      <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+      <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+      <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
+      <script src="{{ asset('js/scripts.js') }}"></script>
       <script src="https://use.fontawesome.com/53b1854a8e.js"></script>
 
       <!-- Fonts -->
@@ -25,7 +26,8 @@
 
       <!-- Styles -->
       <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/style.css?v=20200820') }}" rel="stylesheet">
       <style>.whatsapp-button{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100}.whatsapp-button:hover{color:#fff}.whatsapp-button .fa{margin-top:15px}</style>
 
       <!-- SEO Metatags -->

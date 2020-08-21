@@ -9,6 +9,7 @@ use App\Contact;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Database\QueryException;
 
 class HomeController extends Controller
 {
@@ -39,9 +40,20 @@ class HomeController extends Controller
                 'whatsapp' => $request['whatsapp'],
                 'role' => $request['role'],
             ]);
-            return redirect()->away('https://wa.me/' . $admin->whatsapp . '?text=' . $admin->message);
+            return response()->json(array(
+                'ok' => true,
+                'url' => 'https://wa.me/' . $admin->whatsapp . '?text=' . $admin->message,
+            ));
         } catch(ValidationException $exc) {
-            return redirect()->back()->with('danger', $exc->getMessage());
+            return response()->json(array(
+                'ok' => false,
+                'message' => $exc->getMessage(),
+            ));
+        } catch(QueryException $exc) {
+            return response()->json(array(
+                'ok' => false,
+                'message' => $exc->getMessage(),
+            ));
         }
     }
 

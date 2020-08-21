@@ -36,8 +36,8 @@
                 <p>Somos grupo em todos os sentidos da palavra. Pensamos juntos para pensar muito maior. Reunimos ideias, sonhos e pessoas em um único lugar. Lutamos para fazer a diferença: na vida de cada um de nós e no mundo todo. Por que cada dia é uma nova oportunidade de vencer. E, para nós, vitória só vale se for no plural.</p>
             </div>
             <div class="col-lg-6">
-                <div class="mb-5">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D-VURvUjx4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-wrapper mb-5">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D-VURvUjx4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
                 </div>
             </div>
         </div>
@@ -48,15 +48,15 @@
 <div class="section" style="background-color: #efefef;">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8">
-                <div class="main-video mb-5">
+            <div class="col-lg-7">
+                <div class="main-video video-wrapper mb-5">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/_VceQT4Y2Hk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div id="div-form" class="col-lg-4">
+            <div id="div-form" class="col-lg-5">
                 <h2 class="text-center font-weight-bold">Insira seus dados</h2>
                 <p>Um de nossos Líderes entrará em contato com você, pelo WHATSAPP</p>
-                <form role="form" class="form" method="post" action="{{ route('home_create_contact') }}">
+                <form id="form-contact" role="form" class="form" method="post" action="{{ route('home_create_contact') }}">
                     @csrf
                     @if (session('danger'))
                         <div class="alert alert-danger">
@@ -65,7 +65,7 @@
                     @endif
                     <div class="form-group">
                         <label for="display_name" class="control-label">Nome Completo</label>
-                        <input type="text" id="display_name" name="display_name" class="form-control form-control-lg" placeholder="Informe seu nome" required />
+                        <input type="text" id="display_name" name="display_name" class="form-control form-control-lg" placeholder="Informe seu nome" maxlength="36" required />
                     </div>
                     <div class="form-group">
                         <label for="whatsapp" class="control-label">Seu WhatsApp</label>
@@ -133,7 +133,7 @@
 </div>
 
 <!-- Linha de chás -->
-<div class="section simulations" style="background-color: #e0e0e0;color: #333;">
+<div class="section simulations products">
     <div class="container">
         <div class="text-center">
             <h2 class="title">CONHEÇA NOSSA LINHA DE CHÁS</h2>
@@ -142,19 +142,19 @@
         <div class="row">
             <div class="col-lg-4 text-center mb-5">
                 <h5 class="name">Superchá SB</h5>
-                <img src="/img/prod1.png" alt="Simulacao 1" class="img-fluid" />
+                <img src="/img/prod1.png" alt="Simulacao 1" class="img-fluid animate__animated" />
                 <span class="head">Principais Benefícios:</span>
                 <p class="desc">Ajuda a eliminar as toxinas do corpo; Desintoxica e promove a limpeza do organismo; Melhora a digestão e funcionamento intestinal.</p>
             </div>
             <div class="col-lg-4 text-center mb-5">
                 <h5 class="name">Linfachá</h5>
-                <img src="/img/prod2.png" alt="Simulacao 1" class="img-fluid" />
+                <img src="/img/prod2.png" alt="Simulacao 1" class="img-fluid animate__animated" />
                 <span class="head">Principais Benefícios:</span>
                 <p class="desc">Ajuda na queima da gordura corporal; Elimina toxinas e líquidos; Diminui o inchaço; Termogênico, Desintoxicante e Diurético.</p>
             </div>
             <div class="col-lg-4 text-center mb-5">
                 <h5 class="name">Sbeltchá</h5>
-                <img src="/img/prod3.png" alt="Simulacao 1" class="img-fluid" />
+                <img src="/img/prod3.png" alt="Simulacao 1" class="img-fluid animate__animated" />
                 <span class="head">Principais Benefícios:</span>
                 <p class="desc">Promove a saciedade; Queima gordura corporal; Acelera o metabolismo; Melhora a digestão; Termogênico.</p>
             </div>
@@ -162,21 +162,45 @@
         <div class="row">
             <div class="col-lg-4 text-center mb-5">
                 <h5 class="name">Glycontrol</h5>
-                <img src="/img/prod4.png" alt="Simulacao 1" class="img-fluid" />
+                <img src="/img/prod4.png" alt="Simulacao 1" class="img-fluid animate__animated" />
                 <span class="head">Principais Benefícios:</span>
                 <p class="desc">Auxilia no controle da glicemia; Normaliza os níveis de açúcar no sangue.</p>
             </div>
             <div class="col-lg-4 text-center mb-5">
                 <h5 class="name">Sonobom</h5>
-                <img src="/img/prod5.png" alt="Simulacao 1" class="img-fluid" />
+                <img src="/img/prod5.png" alt="Simulacao 1" class="img-fluid animate__animated" />
                 <span class="head">Principais Benefícios:</span>
                 <p class="desc">Reduz os efeitos da insônia; Ajuda a reduzir dores de cabeça; Promove um sono de qualidade; Ajuda a relaxar; Alivia o stress; Reduz a ansiedade.</p>
             </div>
             <div class="col-lg-4 text-center mb-5">
                 <h5 class="name">Santé</h5>
-                <img src="/img/prod6.png" alt="Simulacao 1" class="img-fluid" />
+                <img src="/img/prod6.png" alt="Simulacao 1" class="img-fluid animate__animated" />
                 <span class="head">Principais Benefícios:</span>
                 <p class="desc">Elimina toxinas; Promove o rejuvenescimento; Desintoxica o organismo; Melhora a digestão e o funcionamento intestinal; Antioxidante.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Simulacao de Lucros -->
+<div class="section simulations" style="background-color: #e0e0e0;color: #333;">
+    <div class="container">
+        <div class=" text-center">
+            <h2 class="title">SIMULAÇÃO DE LUCRO EM 30 DIAS</h2>
+            <p class="subtitle mb-5">Se você vender algumas unidades por dia no preço sugerido, você poderá incrementar sua renda mensal com valores muito atrativos.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <img src="/img/sim1.png" alt="Simulacao 1" class="img-fluid" />
+                <p>LUCRO POR CHÁ VENDIDO <strong>R$ 20</strong><br/><strong>1 CHÁ</strong> X R$ 20 X 30 DIAS<br/><span class="text-color-red">R$ 600</span> LUCRO NO MÊS</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img src="/img/sim2.png" alt="Simulacao 2" class="img-fluid" />
+                <p>LUCRO POR CHÁ VENDIDO <strong>R$ 20</strong><br/><strong>2 CHÁS</strong> X R$ 20 X 30 DIAS<br/><span class="text-color-red">R$ 1200</span> LUCRO NO MÊS</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img src="/img/sim3.png" alt="Simulacao 3" class="img-fluid" />
+                <p>LUCRO POR CHÁ VENDIDO <strong>R$ 20</strong><br/><strong>3 CHÁS</strong> X R$ 20 X 30 DIAS<br/><span class="text-color-red">R$ 1800</span> LUCRO NO MÊS</p>
             </div>
         </div>
     </div>
@@ -209,37 +233,30 @@
     </div>
 </div>
 
-<!-- Simulacao de Lucros -->
-<div class="section simulations" style="background-color: #e0e0e0;color: #333;">
+<!-- Empreender -->
+<div class="section enterpreuner">
     <div class="container">
-        <div class=" text-center">
-            <h2 class="title">SIMULAÇÃO DE LUCRO EM 30 DIAS</h2>
-            <p class="subtitle mb-5">Se você vender algumas unidades por dia no preço sugerido, você poderá incrementar sua renda mensal com valores muito atrativos.</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 text-center">
-                <img src="/img/sim1.png" alt="Simulacao 1" class="img-fluid" />
-                <p>LUCRO POR CHÁ VENDIDO = <strong>R$ 20 1 CHÁ</strong> X R$ 20 X 30 DIAS <span class="text-color">R$ 600</span> LUCRO NO MÊS</p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <img src="/img/sim2.png" alt="Simulacao 2" class="img-fluid" />
-                <p>LUCRO POR CHÁ VENDIDO = <strong>R$ 20 2 CHÁS</strong> X R$ 20 X 30 DIAS <span class="text-color">R$ 1200</span> LUCRO NO MÊS</p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <img src="/img/sim3.png" alt="Simulacao 3" class="img-fluid" />
-                <p>LUCRO POR CHÁ VENDIDO = <strong>R$ 20 3 CHÁS</strong> X R$ 20 X 30 DIAS <span class="text-color">R$ 1800</span> LUCRO NO MÊS</p>
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <img src="/img/brand.png" alt="Brand image" class="img-fluid" />
+                </div>
+                <div class="col-lg-8">
+                    <h2>A forma mais simples de começar a <strong>empreender</strong></h2>
+                    <p>Nossa Missão: Ajudar o máximo possível de pessoas à mudar de vida.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Footer -->
-<footer id="footer">
+<footer id="footer" class="section">
     <div class="container text-center">
         <div class="mb-3">
             <img src="/img/footer.png" alt="Footer" class="img-fluid" />
         </div>
-        <p>©2020 Revenda Superchá - Página desenvolvida por <strong>Líder em Expansão</strong> Fique Rico com Saúde.</p>
+        <p>©2020 Fique Rico com Saúde - Página desenvolvida por um <strong>Líder em Expansão</strong></p>
     </div>
 </footer>
 @endsection
