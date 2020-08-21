@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Contact;
+use App\User;
+use App\Purchase;
 
 class AdminController extends Controller
 {
@@ -13,7 +17,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth'); 
     }
 
     /**
@@ -23,6 +27,14 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $countContacts = Contact::where('admin_id', Auth::user()->id)->count();
+        $countUsers = User::where('admin_id', Auth::user()->id)->count();
+        $countPurchases = Purchase::where('admin_id', Auth::user()->id)->count();
+
+        return view('admin.index', [
+            'contacts' => $countContacts, 
+            'users' => $countUsers,
+            'purchases' => $countPurchases,
+        ]);
     }
 }

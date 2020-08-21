@@ -13,20 +13,21 @@
       <!-- Title -->
       <title>{{ config('app.name', 'Laravel') }}</title>
 
-      <!-- Scripts -->
-      <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-      <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-      <script src="{{ asset('js/admin-scripts.js') }}"></script>
-      <script src="https://use.fontawesome.com/53b1854a8e.js"></script>
-
       <!-- Fonts -->
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
       <!-- Styles -->
       <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/admin-styles.css?v=20200820') }}" rel="stylesheet">
+      <link href="{{ asset('css/admin-styles.css?v=20200820001') }}" rel="stylesheet">
       <style>.whatsapp-button{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100}.whatsapp-button:hover{color:#fff}.whatsapp-button .fa{margin-top:15px}</style>
+
+      <!-- Scripts -->
+      <script type="text/javascript" src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/jquery.mask.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/admin-scripts.js?v=20200820001') }}"></script>
+      <script src="https://use.fontawesome.com/53b1854a8e.js"></script>
   </head>
 <body>
     <div id="app">
@@ -46,16 +47,16 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item {{ request()->route()->getName() === 'admin_home' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_home') }}">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ route('admin_home') }}">Dashboard <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'admin_users' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_users') }}">Usuários</a>
+                                <a class="nav-link" href="{{ route('admin_users') }}">Members</a>
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'admin_contacts' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_contacts') }}">Contatos</a>
+                                <a class="nav-link" href="{{ route('admin_contacts') }}">Contacts</a>
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'admin_settings' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_settings') }}">Configuracao</a>
+                                <a class="nav-link" href="{{ route('admin_settings') }}">Settings</a>
                             </li>
                         </ul>
                         <!-- Right Side Of Navbar -->

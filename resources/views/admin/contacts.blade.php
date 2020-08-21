@@ -5,25 +5,25 @@
     @if (count($contacts) > 0)
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-4">Todos os Contatos</h4>
+          <h4 class="card-title mb-3">All Contacts ({{ count($contacts) }})</h4>
           <table class="table table-striped table-hover">
             <thead>
               <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nome</th>
-                <th scope="col">E-mail</th>
-                <th scope="col">WhatsApp</th>
-                <th scope="col">Registrado em</th>
+                <th scope="col" width="15%">Registered</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col" width="15%">Phone</th>
+                <th scope="col" width="10%">Type</th>
               </tr>
             </thead>
             <tbody>
               @foreach ($contacts as $contact)
                 <tr>
-                  <th scope="row">{{ $contact->id }}</th>
+                  <td>{{ date('d/m/Y', strtotime($contact->created_at)) }}</td>
                   <td>{{ $contact->display_name }}</td>
                   <td>{{ $contact->email }}</td>
                   <td>{{ $contact->whatsapp }}</td>
-                  <td>{{ $contact->created_at }}</td>
+                  <td>{{ ucfirst($contact->role) }}</td>
                 </tr>
               @endforeach
             </tbody>

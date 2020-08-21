@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt-BR">
   <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,13 +12,6 @@
 
       <!-- Title -->
       <title>{{ config('app.name', 'Laravel') }}</title>
-
-      <!-- Scripts -->
-      <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-      <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-      <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
-      <script src="{{ asset('js/scripts.js') }}"></script>
-      <script src="https://use.fontawesome.com/53b1854a8e.js"></script>
 
       <!-- Fonts -->
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -45,6 +38,13 @@
       <meta property="og:locale" content="pt_BR">
       <meta property="og:type" content="website">
       <meta property="og:url" content="https://fiquericocomsaude.com.br">
+
+      <!-- Scripts -->
+      <script type="text/javascript" src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/jquery.mask.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+      <script type="text/javascript" src="https://use.fontawesome.com/53b1854a8e.js"></script>
   </head>
   <body>  
     @yield('content')

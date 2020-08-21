@@ -55,7 +55,7 @@ class AdminCreateUserController extends Controller
         $user = User::create([
             'admin_id' => Auth::user()->id, 
             'display_name' => $request['display_name'],
-            'username' => $request['email'],
+            'username' => $request['username'],
             'email' => $request['email'],
             'whatsapp' => $request['whatsapp'],
             'password' => Hash::make($request['password']),
