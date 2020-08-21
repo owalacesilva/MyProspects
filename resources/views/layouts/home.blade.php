@@ -35,10 +35,10 @@
       <meta name="description" content="Fique Rico com Saúde - Marketing de Relacionamento">
       <meta name="author" content="Douglas Souza">
       <meta name="keywords" content="MMN, Marketing, Relacionamento, Multinivel">
-      <meta rel="icon" type="image/png" href="{{ asset('img/logo-square.png') }}">
+      <meta rel="icon" type="image/png" href="{{ asset('img/image2.png') }}">
       <meta property="og:title" content="Fique Rico com Saúde - Loja">
       <meta property="og:description" content="Fique Rico com Saúde - Marketing de Relacionamento">
-      <meta property="og:image" content="{{ asset('img/logo-square.png') }}">
+      <meta property="og:image" content="{{ asset('img/image2.png') }}">
       <meta property="og:site_name" content="fiquericocomsaude">
       <meta property="og:locale" content="pt_BR">
       <meta property="og:type" content="website">
