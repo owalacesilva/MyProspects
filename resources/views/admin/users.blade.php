@@ -36,7 +36,7 @@
                   <td>{{ $user->whatsapp }}</td>
                   <td>
                     <div class="text-center">
-                      <a href="{{ route('admin_new_user') }}" title="Alterar senha" style="color: green;">
+                      <a href="{{ route('admin_users_password', $user->username) }}" title="Alterar senha" style="color: green;">
                         <i class="fa fa-fw fa-lg fa-lock"></i>
                       </a>
                       <a href="{{ route('admin_new_user') }}" title="Bloquear" style="color: red;">

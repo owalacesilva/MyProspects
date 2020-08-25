@@ -25,6 +25,7 @@ Route::post('/admin/login', 'Auth\LoginController@adminLogin')->name('post_admin
 Route::post('/users/login', 'Auth\LoginController@userLogin');
 Route::post('/admin/register', 'Auth\RegisterController@createAdmin');
 Route::post('/users/register', 'Auth\RegisterController@createUser');
+Route::post('/users/password', 'Auth\RegisterController@updateUser');
 
 // Route::view('/home', 'home')->middleware('auth');
 Route::get('/admin', 'AdminController@index')->name('admin_home');
@@ -34,5 +35,8 @@ Route::get('/admin/users/new', 'AdminCreateUserController@new')->name('admin_new
 Route::post('/admin/users', 'AdminCreateUserController@create')->name('admin_create_user');
 Route::get('/admin/settings', 'AdminSettingsController@index')->name('admin_settings');
 Route::post('/admin/settings/update_whatsapp', 'AdminSettingsController@updateWhatsapp')->name('admin_update_whatsapp');
+Route::get('/admin/users/{username}/password', 'AdminUpdateUserPasswordController@index')->name('admin_users_password');
+Route::post('/admin/users/{username}/password', 'AdminUpdateUserPasswordController@update')->name('admin_users_update_password');
+
 Route::post('/contacts', 'HomeController@createContact')->name('home_create_contact');
 Route::get('/users', 'UserController@index')->name('users_home');
