@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Purchase;
+use App\Contact;
 
-class AdminPurchasesController extends Controller
+class UserContactsController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -16,7 +16,7 @@ class AdminPurchasesController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth:user');
     }
 
     /**
@@ -26,13 +26,13 @@ class AdminPurchasesController extends Controller
      */
     public function index()
     {
-        $purchases = DB::table('purchases')
+        $contacts = DB::table('purchases')
                 ->leftJoin('users', 'purchases.user_id', '=', 'users.id')
                 ->leftJoin('purchase_contacts', 'purchases.id', '=', 'purchase_contacts.purchase_id')
-                ->where('purchases.admin_id', Auth::user()->id)
-                ->select('users.*', 'purchases.*', 'purchase_contacts.purchase_id', DB::raw('COUNT(purchase_contacts.purchase_id) as `total_contacts`'))
-                ->groupBy('purchases.id')
+                ->leftJoin('contacts', 'purchase_contacts.contact_id', '=', 'contacts.id')
+                ->where('purchases.user_id', Auth::user()->id)
+                ->select('contacts.*')
                 ->get();
-        return view('admin.purchases', ['purchases' => $purchases]);
+        return view('user.contacts', ['contacts' => $contacts]);
     }
 }

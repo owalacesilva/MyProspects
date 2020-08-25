@@ -1,20 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
   <div class="container">
     @if (count($contacts) > 0)
       <div class="card">
         <div class="card-body">
-          <div class="row">
-            <div class="col-12 col-sm-6 mb-3">
-              <h4 class="card-title mb-3">All Contacts ({{ count($contacts) }})</h4>
-            </div>
-            <div class="col-12 col-sm-6 text-sm-right mb-3">
-              <a href="{{ route('admin_new_purchase') }}" class="btn btn-primary">
-                <i class="fa fa-fw fa-shopping-cart"></i>Create purchase
-              </a>
-            </div>
-          </div>
+          <h4 class="card-title mb-3">All My Contacts ({{ count($contacts) }})</h4>
           <table class="table table-striped table-hover">
             <thead>
               <tr>

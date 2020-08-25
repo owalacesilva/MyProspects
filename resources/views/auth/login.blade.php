@@ -5,9 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Área do admin') }}</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('post_admin_login') }}">
+                    <h4 class="card-title mb-3">{{ __('Login') }}</h4>
+                    @if ($url === 'admin')
+                        <form method="POST" action="{{ route('post_admin_login') }}">
+                    @elseif ($url === 'user')
+                        <form method="POST" action="{{ route('post_user_login') }}">
+                    @endif
                         @csrf
                         <div class="form-group">
                             <label for="email" class="control-label">{{ __('Seu Email') }}</label>

@@ -22,7 +22,7 @@ Route::get('/admin/register', 'Auth\RegisterController@showAdminRegisterForm');
 Route::get('/users/register', 'Auth\RegisterController@showUserRegisterForm');
 
 Route::post('/admin/login', 'Auth\LoginController@adminLogin')->name('post_admin_login');
-Route::post('/users/login', 'Auth\LoginController@userLogin');
+Route::post('/users/login', 'Auth\LoginController@userLogin')->name('post_user_login');
 Route::post('/admin/register', 'Auth\RegisterController@createAdmin');
 Route::post('/users/register', 'Auth\RegisterController@createUser');
 Route::post('/users/password', 'Auth\RegisterController@updateUser');
@@ -48,4 +48,6 @@ Route::get('/admin/purchases/new', 'AdminCreatePurchaseController@index')->name(
 Route::post('/admin/purchases', 'AdminCreatePurchaseController@create')->name('admin_create_purchase');
 
 Route::post('/contacts', 'HomeController@createContact')->name('home_create_contact');
-Route::get('/users', 'UserController@index')->name('users_home');
+
+Route::get('/users', 'UserController@index')->name('user_home');
+Route::get('/users/contacts', 'UserContactsController@index')->name('user_contacts');
