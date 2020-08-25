@@ -11,5 +11,15 @@ class PurchaseContact extends Model
      *
      * @var string
      */
-    protected $table = 'purchase_contracts';
+    protected $table = 'purchase_contacts';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'purchase_id', 
+        'contact_id', 
+    ];
 }

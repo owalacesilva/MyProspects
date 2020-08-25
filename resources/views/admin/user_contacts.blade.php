@@ -7,12 +7,10 @@
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-sm-6 mb-3">
-              <h4 class="card-title mb-3">All Contacts ({{ count($contacts) }})</h4>
+              <h4 class="card-title mb-3">All Contacts of ({{ $user->display_name }})</h4>
             </div>
             <div class="col-12 col-sm-6 text-sm-right mb-3">
-              <a href="{{ route('admin_new_purchase') }}" class="btn btn-primary">
-                <i class="fa fa-fw fa-shopping-cart"></i>Create purchase
-              </a>
+              {{ count($contacts) }} Contacts
             </div>
           </div>
           <table class="table table-striped table-hover">
@@ -47,7 +45,7 @@
       </div>
     @else
       <div class="text-center">
-        <h4>Nenhum contato registrado</h4>
+        <h4>Nenhum contato comprado</h4>
       </tr>
     @endif
   </div>

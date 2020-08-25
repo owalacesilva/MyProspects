@@ -19,6 +19,7 @@
 
       <!-- Styles -->
       <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet">
       <link href="{{ asset('css/admin-styles.css?v=20200820001') }}" rel="stylesheet">
       <style>.whatsapp-button{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100}.whatsapp-button:hover{color:#fff}.whatsapp-button .fa{margin-top:15px}</style>
 
@@ -26,6 +27,8 @@
       <script type="text/javascript" src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
       <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
       <script type="text/javascript" src="{{ asset('js/jquery.mask.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/sweetalert.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
       <script type="text/javascript" src="{{ asset('js/admin-scripts.js?v=20200820001') }}"></script>
       <script src="https://use.fontawesome.com/53b1854a8e.js"></script>
   </head>
@@ -54,6 +57,9 @@
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'admin_contacts' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('admin_contacts') }}">Contacts</a>
+                            </li>
+                            <li class="nav-item {{ request()->route()->getName() === 'admin_purchases' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('admin_purchases') }}">Purchases</a>
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'admin_settings' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('admin_settings') }}">Settings</a>

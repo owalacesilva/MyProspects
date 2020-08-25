@@ -21,6 +21,12 @@ var spOptions = {
 
 (function ($, undefined) {
   $(document).ready(function() {
+    $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+    
     $(".products img").mouseenter(function(){
       $(this).addClass('animate__bounce')
     });

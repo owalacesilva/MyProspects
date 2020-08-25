@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
                   ->constrained('admins')
                   ->onDelete('cascade');
             $table->boolean('blocked')->default(false);
-            $table->date('blocked_at');
+            $table->date('blocked_at')->nullable();
             $table->string('display_name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

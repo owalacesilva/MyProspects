@@ -38,5 +38,14 @@ Route::post('/admin/settings/update_whatsapp', 'AdminSettingsController@updateWh
 Route::get('/admin/users/{username}/password', 'AdminUpdateUserPasswordController@index')->name('admin_users_password');
 Route::post('/admin/users/{username}/password', 'AdminUpdateUserPasswordController@update')->name('admin_users_update_password');
 
+Route::post('/admin/users/block', 'AdminUsersController@block')->name('admin_block_users');
+Route::post('/admin/users/unblock', 'AdminUsersController@unblock')->name('admin_unblock_users');
+
+Route::get('/admin/users/{username}/contacts', 'AdminUsersController@contacts')->name('admin_user_contacts');
+
+Route::get('/admin/purchases', 'AdminPurchasesController@index')->name('admin_purchases');
+Route::get('/admin/purchases/new', 'AdminCreatePurchaseController@index')->name('admin_new_purchase');
+Route::post('/admin/purchases', 'AdminCreatePurchaseController@create')->name('admin_create_purchase');
+
 Route::post('/contacts', 'HomeController@createContact')->name('home_create_contact');
 Route::get('/users', 'UserController@index')->name('users_home');

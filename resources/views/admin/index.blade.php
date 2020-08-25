@@ -21,7 +21,7 @@
             </a>
           </div>
           <div class="col-12 col-sm-4">
-            <a href="{{ route('admin_settings') }}" class="card-stats" style="background-color: #28a745">
+            <a href="{{ route('admin_purchases') }}" class="card-stats" style="background-color: #28a745">
               <h4>{{ $purchases }}</h4>
               <p>Vendas realizadas</p>
               <i class="fa fa-shopping-cart"></i>

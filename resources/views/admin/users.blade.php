@@ -29,7 +29,11 @@
               @foreach ($users as $user)
                 <tr>
                   <td>
-                    <label class="badge badge-success">Ativo</label>
+                    @if ($user->blocked)
+                      <label class="badge badge-danger">Bloqueado</label>
+                    @else
+                      <label class="badge badge-success">Ativo</label>
+                    @endif
                   </td>
                   <td>{{ $user->display_name }}</td>
                   <td>{{ $user->username }}</td>
@@ -39,10 +43,16 @@
                       <a href="{{ route('admin_users_password', $user->username) }}" title="Alterar senha" style="color: green;">
                         <i class="fa fa-fw fa-lg fa-lock"></i>
                       </a>
-                      <a href="{{ route('admin_new_user') }}" title="Bloquear" style="color: red;">
-                        <i class="fa fa-fw fa-lg fa-ban"></i>
-                      </a>
-                      <a href="{{ route('admin_new_user') }}" title="Contatos" style="color: blue;">
+                      @if ($user->blocked)
+                        <a class="btn-unblock-user" data-user-id="{{ $user->id }}" data-user-name="{{ $user->display_name }}" title="Desbloquear" style="color: gray;">
+                          <i class="fa fa-fw fa-lg fa-undo"></i>
+                        </a>
+                      @else
+                        <a class="btn-block-user" data-user-id="{{ $user->id }}" data-user-name="{{ $user->display_name }}" title="Bloquear" style="color: red;">
+                          <i class="fa fa-fw fa-lg fa-ban"></i>
+                        </a>
+                      @endif
+                      <a href="{{ route('admin_user_contacts', $user->username) }}" title="Contatos" style="color: blue;">
                         <i class="fa fa-fw fa-lg fa-list-ul"></i>
                       </a>
                     </div>
