@@ -50,10 +50,10 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item {{ request()->route()->getName() === 'user_home' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('user_home') }}">Dashboard</a>
+                                <a class="nav-link" href="{{ route('user_home') }}">{{ __('messages.menu_item_dashboard') }}</a>
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'user_contacts' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('user_contacts') }}">My Contacts</a>
+                                <a class="nav-link" href="{{ route('user_contacts') }}">{{ __('messages.menu_item_contacts') }}</a>
                             </li>
                         </ul>
                         <!-- Right Side Of Navbar -->
@@ -67,7 +67,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('messages.menu_item_logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

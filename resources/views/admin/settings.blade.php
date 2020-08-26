@@ -4,7 +4,7 @@
   <div class="container">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title mb-4">Configuraçoes</h4>
+        <h4 class="card-title mb-4">{{ __('messages.title_settings_page') }}</h4>
         <fieldset class="mb-5">
           <legend>Configurar WhatsApp de destino</legend>
           <form role="form" class="form form-async" method="post" action="{{ route('admin_update_whatsapp') }}">

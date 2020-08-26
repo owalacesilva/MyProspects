@@ -4,7 +4,7 @@
   <div class="container">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title mb-4">Adicionar novo usuário</h4>
+        <h4 class="card-title mb-4">{{ __('messages.title_add_member_page') }}</h4>
         <form role="form" class="form" method="post" action="{{ route('admin_create_user') }}">
           @csrf
           <div class="row">

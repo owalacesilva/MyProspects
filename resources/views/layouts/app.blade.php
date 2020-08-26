@@ -50,16 +50,16 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item {{ request()->route()->getName() === 'admin_home' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_home') }}">Dashboard <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ route('admin_home') }}">{{ __('messages.menu_item_dashboard') }} <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'admin_users' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_users') }}">Members</a>
+                                <a class="nav-link" href="{{ route('admin_users') }}">{{ __('messages.menu_item_members') }}</a>
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'admin_contacts' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_contacts') }}">Contacts</a>
+                                <a class="nav-link" href="{{ route('admin_contacts') }}">{{ __('messages.menu_item_contacts') }}</a>
                             </li>
                             <li class="nav-item {{ request()->route()->getName() === 'admin_purchases' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_purchases') }}">Purchases</a>
+                                <a class="nav-link" href="{{ route('admin_purchases') }}">{{ __('messages.menu_item_purchases') }}</a>
                             </li>
                         </ul>
                         <!-- Right Side Of Navbar -->
@@ -71,12 +71,12 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('admin_settings') }}">
-                                        Settings
+                                        {{ __('messages.menu_item_settings') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('messages.menu_item_logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

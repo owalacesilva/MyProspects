@@ -7,21 +7,21 @@
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-sm-6 mb-3">
-              <h4 class="card-title mb-4">All Members ({{ count($users) }})</h4>
+              <h4 class="card-title mb-4">{{ __('messages.title_members_page') }} ({{ count($users) }})</h4>
             </div>
             <div class="col-12 col-sm-6 text-sm-right mb-3">
               <a href="{{ route('admin_new_user') }}" class="btn btn-primary">
-                <i class="fa fa-fw fa-plus"></i>Add Member
+                <i class="fa fa-fw fa-plus"></i>{{ __('buttons.btn_add_members') }}
               </a>
             </div>
           </div>
           <table class="table table-striped table-hover">
             <thead>
               <tr>
-                <th scope="col" width="10%">Status</th>
-                <th scope="col">Name</th>
-                <th scope="col">Login</th>
-                <th scope="col" width="15%">WhatsApp</th>
+                <th scope="col" width="10%">{{ __('messages.user_status_field') }}</th>
+                <th scope="col">{{ __('messages.user_name_field') }}</th>
+                <th scope="col">{{ __('messages.user_username_field') }}</th>
+                <th scope="col" width="15%">{{ __('messages.user_whatsapp_field') }}</th>
                 <th scope="col" width="15%"></th>
               </tr>
             </thead>

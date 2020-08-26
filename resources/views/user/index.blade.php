@@ -4,7 +4,7 @@
   <div class="container">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title mb-4">Dashboard</h4>
+        <h4 class="card-title mb-4">{{ __('messages.title_dashboard_page') }}</h4>
         <ul class="plans">
           <li class="plan highlight">
             <span class="price price-green">R$ 10,00</span>            

@@ -7,7 +7,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-sm-6 mb-3">
-              <h4 class="card-title mb-3">All Contacts of ({{ $user->display_name }})</h4>
+              <h4 class="card-title mb-3">{{ __('messages.title_contacts_page') }} ({{ $user->display_name }})</h4>
             </div>
             <div class="col-12 col-sm-6 text-sm-right mb-3">
               {{ count($contacts) }} Contacts

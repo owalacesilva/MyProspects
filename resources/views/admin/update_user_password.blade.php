@@ -4,7 +4,7 @@
   <div class="container">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title mb-4">Atualizar senha do usuário</h4>
+        <h4 class="card-title mb-4">{{ __('messages.title_update_member_password_page') }}</h4>
         <form role="form" class="form" method="post" action="{{ route('admin_users_update_password', $user->username) }}">
           @csrf
           <div class="row">

@@ -5,14 +5,14 @@
     @if (count($contacts) > 0)
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-3">All My Contacts ({{ count($contacts) }})</h4>
+          <h4 class="card-title mb-3">{{ __('messages.title_contacts_page') }} ({{ count($contacts) }})</h4>
           <table class="table table-striped table-hover">
             <thead>
               <tr>
-                <th scope="col" width="15%">Registered</th>
-                <th scope="col">Name</th>
-                <th scope="col" width="15%">Phone</th>
-                <th scope="col" width="10%">Type</th>
+                <th scope="col" width="15%">{{ __('messages.contact_registered_field') }}</th>
+                <th scope="col">{{ __('messages.contact_name_field') }}</th>
+                <th scope="col" width="15%">{{ __('messages.contact_whatsapp_field') }}</th>
+                <th scope="col" width="10%">{{ __('messages.contact_role_field') }}</th>
               </tr>
             </thead>
             <tbody>

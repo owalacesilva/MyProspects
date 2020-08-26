@@ -4,7 +4,7 @@
   <div class="container">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title mb-4">Dashboard</h4>
+        <h4 class="card-title mb-4">{{ __('messages.title_dashboard_page') }}</h4>
         <div class="row">
           <div class="col-12 col-sm-4">
             <a href="{{ route('admin_contacts') }}" class="card-stats">

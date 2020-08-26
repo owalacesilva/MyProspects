@@ -5,7 +5,7 @@
     @if (count($contacts) > 0)
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-4">Create purchase</h4>
+          <h4 class="card-title mb-4">{{ __('messages.title_create_purchase_page') }}</h4>
           <form role="form" id="form-purchase-contact" class="form" method="post" action="{{ route('admin_create_purchase') }}">
             @csrf
             <div class="row">
@@ -25,12 +25,12 @@
               <table id="table-purchase-contacts" class="display" style="width:100%">
                 <thead>
                   <tr>
-                    <th scope="col" width="5%">ID</th>
-                    <th scope="col" width="15%">Registered</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col" width="15%">Phone</th>
-                    <th scope="col" width="10%">Type</th>
+                    <th scope="col" width="5%">{{ __('messages.contact_id_field') }}</th>
+                    <th scope="col" width="15%">{{ __('messages.contact_registered_field') }}</th>
+                    <th scope="col">{{ __('messages.contact_name_field') }}</th>
+                    <th scope="col">{{ __('messages.contact_email_field') }}</th>
+                    <th scope="col" width="15%">{{ __('messages.contact_whastapp_field') }}</th>
+                    <th scope="col" width="10%">{{ __('messages.contact_role_field') }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -54,14 +54,16 @@
               </table>
             </div>
             <div class="text-right">
-              <button type="submit" class="btn btn-success">Create purchase</button>
+              <button type="submit" class="btn btn-success">
+                {{ __('buttons.btn_create_purchase') }}
+              </button>
             </div>
           </form>
         </div>
       </div>
     @else
       <div class="text-center">
-        <h4>Nenhum contato registrado para ser vendido</h4>
+        <h4>{{ __('messages.not_contacts_found') }}</h4>
       </tr>
     @endif
   </div>
