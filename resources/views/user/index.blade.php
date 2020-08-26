@@ -5,29 +5,32 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title mb-4">Dashboard</h4>
-        <div class="row">
-          <div class="col-12 col-sm-4">
-            <a href="{{ url('https://www.mercadopago.com.br/') }}" class="card-stats" target="_blank">
-              <h4>R$ 100,00</h4>
-              <p>Pacote Bronze</p>
-              <i class="fa fa-shopping-cart"></i>
-            </a>
-          </div>
-          <div class="col-12 col-sm-4">
-            <a href="{{ url('https://www.mercadopago.com.br/') }}" class="card-stats" target="_blank" style="background-color: #ffc107">
-              <h4>R$ 80,00</h4>
-              <p>Pacote Prata</p>
-              <i class="fa fa-shopping-cart"></i>
-            </a>
-          </div>
-          <div class="col-12 col-sm-4">
-            <a href="{{ url('https://www.mercadopago.com.br/') }}" class="card-stats" target="_blank" style="background-color: #28a745">
-              <h4>R$ 50,00</h4>
-              <p>Pacote Ouro</p>
-              <i class="fa fa-shopping-cart"></i>
-            </a>
-          </div>
-        </div>
+        <ul class="plans">
+          <li class="plan highlight">
+            <span class="price price-green">R$ 10,00</span>            
+            <div class="details">
+              <h1 class="plan-title">Pacote Bronze</h1>
+              <p class="plan-description">30 contatos</p>
+            </div>            
+            <button class="btn select">Quero esse!</button>
+          </li>       
+          <li class="plan">
+            <span class="price price-green">R$ 10,00</span>            
+            <div class="details">
+              <h1 class="plan-title">Pacote Silver</h1>
+              <p class="plan-description">60 contatos</p>
+            </div>            
+            <button class="btn select">Quero esse!</button>
+          </li>
+          <li class="plan">
+            <span class="price price-green">R$ 10,00</span>            
+            <div class="details">
+              <h1 class="plan-title">Pacote Gold</h1>
+              <p class="plan-description">100 contatos</p>
+            </div>            
+            <button class="btn select">Quero esse!</button>
+          </li>        
+        </ul>
       </div>
     </div>
   </div>

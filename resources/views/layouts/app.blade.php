@@ -20,7 +20,7 @@
       <!-- Styles -->
       <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
       <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/admin-styles.css?v=20200820001') }}" rel="stylesheet">
+      <link href="{{ asset('css/admin-styles.css?v=' . env('APP_VERSION')) }}" rel="stylesheet">
       <style>.whatsapp-button{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100}.whatsapp-button:hover{color:#fff}.whatsapp-button .fa{margin-top:15px}</style>
 
       <!-- Scripts -->
@@ -29,7 +29,7 @@
       <script type="text/javascript" src="{{ asset('js/jquery.mask.min.js') }}"></script>
       <script type="text/javascript" src="{{ asset('js/sweetalert.min.js') }}"></script>
       <script type="text/javascript" src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/admin-scripts.js?v=20200820001') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/admin-scripts.js?v=' . env('APP_VERSION')) }}"></script>
       <script src="https://use.fontawesome.com/53b1854a8e.js"></script>
   </head>
 <body>
@@ -61,18 +61,18 @@
                             <li class="nav-item {{ request()->route()->getName() === 'admin_purchases' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('admin_purchases') }}">Purchases</a>
                             </li>
-                            <li class="nav-item {{ request()->route()->getName() === 'admin_settings' ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('admin_settings') }}">Settings</a>
-                            </li>
                         </ul>
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->display_name }} <span class="caret"></span>
+                                    <img src="{{ asset('/img/img-profile.png') }}" width="40" height="40" class="rounded-circle" />
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('admin_settings') }}">
+                                        Settings
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
+use \Exception;
 
 class AdminSettingsController extends Controller
 {
@@ -51,13 +53,67 @@ class AdminSettingsController extends Controller
      */
     public function updateWhatsapp(Request $request)
     {
-        $this->validator($request->all())->validate();
-        $admin = Auth::user()->fill([
-            'whatsapp' => $request['whatsapp'],
-            'message' => $request['message'],
-        ]);
-        $admin->save();
-        return redirect('admin/settings');
+        try {
+            $this->validator($request->all())->validate();
+            $admin = Auth::user();
+            $admin->fill([
+                'whatsapp' => $request['whatsapp'],
+                'message' => $request['message'],
+            ]);
+            $admin->save();
+
+            return response()->json(array(
+                'ok' => true,
+            ));
+        } catch (ValidationException $exc) {
+            return response()->json(array(
+                'ok' => false,
+                'message' => $exc->getMessage(),
+            ));
+        } catch (Exception $exc) {
+            return response()->json(array(
+                'ok' => false,
+                'message' => $exc->getMessage(),
+            ));
+        }
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function updateSEO(Request $request)
+    {
+        try {
+            Validator::make($request->all(), [
+                'seo_name' => ['required', 'string', 'max:255'],
+                'seo_title' => ['required', 'string', 'max:255'],
+                'seo_description' => ['required', 'string', 'max:255'],
+            ])->validate();
+
+            $admin = Auth::user();
+            /*$admin->fill([
+                'seo_name' => $request['seo_name'],
+                'seo_title' => $request['seo_title'],
+                'seo_description' => $request['seo_description'],
+            ]);
+            $admin->save();*/
+
+            return response()->json(array(
+                'ok' => true,
+            ));
+        } catch (ValidationException $exc) {
+            return response()->json(array(
+                'ok' => false,
+                'message' => $exc->getMessage(),
+            ));
+        } catch (Exception $exc) {
+            return response()->json(array(
+                'ok' => false,
+                'message' => $exc->getMessage(),
+            ));
+        }
     }
 
     /**

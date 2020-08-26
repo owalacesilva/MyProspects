@@ -22,6 +22,10 @@ var spOptions = {
       $(this).toggleClass('selected');
     });
 
+    /**
+     * Form purchase contact 
+     * =====================
+     */
     $("#form-purchase-contact").submit(function(e) {
       e.preventDefault();
       var form = $(this);
@@ -61,6 +65,44 @@ var spOptions = {
         },
         error: function(jqXHR, textStatus, errorThrown) {
           window.alert(errorThrown);
+        },
+        complete: function() {
+          form.find('button[type="submit"]')
+            .prop("disabled", false)
+            .removeClass("btn-loading");
+        }
+      });
+
+      return false;
+    });
+
+    /**
+     * Form whatsapp config 
+     * =====================
+     */
+    $(document).on('submit', '.form-async', function(e) {
+      e.preventDefault();
+      var form = $(this);
+      
+      $.ajax({
+        url: form.prop('action'),
+        method: "POST", 
+        dataType: "json",
+        data: form.serializeArray(),
+        beforeSend: function() {
+          form.find('button[type="submit"]')
+            .prop("disabled", true)
+            .addClass("btn-loading");
+        }, 
+        success: function(data, textStatus, jqXHR) {
+          if (data.ok) {
+            swal("Pronto!", "Operação realizada com sucesso!", "success");
+          } else {
+            swal("Atenção!", data.message, "error");
+          }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          swal("Atenção!", errorThrown, "error");
         },
         complete: function() {
           form.find('button[type="submit"]')

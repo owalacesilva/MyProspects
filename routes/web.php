@@ -33,8 +33,11 @@ Route::get('/admin/users', 'AdminUsersController@index')->name('admin_users');
 Route::get('/admin/contacts', 'AdminContactsController@index')->name('admin_contacts');
 Route::get('/admin/users/new', 'AdminCreateUserController@new')->name('admin_new_user');
 Route::post('/admin/users', 'AdminCreateUserController@create')->name('admin_create_user');
+
 Route::get('/admin/settings', 'AdminSettingsController@index')->name('admin_settings');
 Route::post('/admin/settings/update_whatsapp', 'AdminSettingsController@updateWhatsapp')->name('admin_update_whatsapp');
+Route::post('/admin/settings/update_seo', 'AdminSettingsController@updateSEO')->name('admin_update_seo');
+
 Route::get('/admin/users/{username}/password', 'AdminUpdateUserPasswordController@index')->name('admin_users_password');
 Route::post('/admin/users/{username}/password', 'AdminUpdateUserPasswordController@update')->name('admin_users_update_password');
 
